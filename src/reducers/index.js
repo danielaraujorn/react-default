@@ -1,9 +1,10 @@
 import {combineReducers} from 'redux'
 import {routerReducer} from 'react-router-redux'
-import outroReducer from './outroReducer'
+import exemplo from './exemploReducer'
 
 const data = {
-  outroReducer,
+  exemplo,
+  routing:routerReducer
 }
 
 const rootReducer = combineReducers(data)

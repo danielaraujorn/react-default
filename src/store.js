@@ -16,7 +16,7 @@ if ('serviceWorker' in navigator) {
 
 const compressor = createCompressor()
 
-//let socket = io("https://doutoronline.herokuapp.com/")
+let socket = io("https://doutoronline.herokuapp.com/")
 //let socket = io("http://localhost:3001")
 let socketIoMiddleware = createSocketIoMiddleware(socket, [ '/post/', '/get/','/delete/','/put/' ])
 
@@ -28,21 +28,13 @@ let store = createStore(
   {
     tema: localStorage.getItem('tema')
   },
+  //para tirar o redux dev tools bota só compose abaixo
   composeEnhancers(
   	applyMiddleware(thunk),
     applyMiddleware(socketIoMiddleware),
     autoRehydrate()
   )
 )
-
-// let store = createStore(
-//   rootReducer,
-//   undefined,
-//   compose(
-//     applyMiddleware(socketIoMiddleware),
-//     autoRehydrate()
-//   )
-// )
 
 persistStore(store,{transforms: [compressor], storage: localForage})
 export default store

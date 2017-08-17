@@ -3,7 +3,6 @@ import './index.css';
 import './bootstrap.min.css';
 import Menu from './components/menu'
 import {Route, Router,Redirect, IndexRoute} from 'react-router'
-import Caso from './components/caso'
 import {history} from './store'
 import {Provider} from 'react-redux'
 import store from './store'
@@ -29,10 +28,9 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-	      <Router history={history} onUpdate={/*logPageView*/}>
+	      <Router history={history}>
           <Route path="/" component={Menu}>
-          	<IndexRoute component={Caso} />
-            <Route path="cadastro" component={Cadastro} />
+          	<IndexRoute component={Inicio} />
           </Route>
           <Redirect from='*' to='/' />
 	      </Router>
