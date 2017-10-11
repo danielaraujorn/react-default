@@ -35,7 +35,6 @@ class Inicio extends Component {
 	}
 
 	changeNumber=(sum)=>{
-		console.log(this.props.contador)
 		if(sum)
 			this.props.toNumber(this.props.contador!==[]?Number(this.props.contador)+1:0)
 		else
