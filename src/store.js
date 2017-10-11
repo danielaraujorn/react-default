@@ -16,8 +16,8 @@ if ('serviceWorker' in navigator) {
 
 const compressor = createCompressor()
 
-let socket = io("https://doutoronline.herokuapp.com/")
-//let socket = io("http://localhost:3001")
+let socket = io("http://localhost:3001")
+
 let socketIoMiddleware = createSocketIoMiddleware(socket, [ '/post/', '/get/','/delete/','/put/' ])
 
 socket.on('action', (d)=> console.log(d.type,d.data))
