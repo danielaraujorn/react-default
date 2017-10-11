@@ -11,10 +11,6 @@ export function setCookie(cname, cvalue, exmili) {
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-export function isValid(value){
-  if(value!==undefined&&value!==null) return true
-  else return false
-}
 export function getLocal(nome){
   if (storageAvailable('localStorage')) {
     return localStorage.getItem(nome)
@@ -60,21 +56,6 @@ export function createCssClass(name,rules){
   else
       style.sheet.insertRule(name+"{"+rules+"}",0);
 }
-export function validarCaracteres(strToReplace) {
-  let strSChar = "áàãâäéèêëíìîïóòõôöúùûüçÁÀÃÂÄÉÈÊËÍÌÎÏÓÒÕÖÔÚÙÛÜÇ";
-  let strNoSChars = "aaaaaeeeeiiiiooooouuuucAAAAAEEEEIIIIOOOOOUUUUC";
-  var newStr = "";
-  for (var i = 0; i < strToReplace.length; i++) {
-      if (strSChar.indexOf(strToReplace.charAt(i)) !== -1) {
-          newStr += strNoSChars.substr(strSChar.search(strToReplace.substr(i, 1)), 1);
-      } else {
-          newStr += strToReplace.substr(i, 1);
-      }
-  }
-
-  return newStr.replace(/[^a-zA-Z 0-9]/g, '').toUpperCase();
-}
-
 export function ascendente(a, b) {
   let comparison = 0;
   if (a.num > b.num) {

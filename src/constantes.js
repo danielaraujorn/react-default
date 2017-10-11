@@ -50,8 +50,7 @@ export const darkTheme = getMuiTheme(darkBaseTheme, {
 })
 
 const constantes = {
-  hostname:'http://localhost:3001',
-  desenvolvimento: true
+  hostname:'http://localhost:3001'
 }
 
 export default constantes

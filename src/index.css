@@ -1,0 +1,21 @@
+*{
+	transition-duration: 2s !important;
+}
+.centralize{
+	min-width: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.allHeight{
+	height: 100vh;
+}
+.display-block{
+	padding:20px;
+	background-color: white;
+	display: block;
+}
+
+.margin{
+	margin:5px auto !important;
+}

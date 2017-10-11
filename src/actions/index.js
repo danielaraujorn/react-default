@@ -1,8 +1,6 @@
-export function exemplo(variavel){
-  if(variavel){
-    return{
-      type:'exemplo',
-      data:variavel
-    }
+export function toNumber(number){
+  return{
+    type:'toNumber',
+    data:number
   }
 }

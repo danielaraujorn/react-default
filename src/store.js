@@ -25,9 +25,6 @@ socket.on('action', (d)=> console.log(d.type,d.data))
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 let store = createStore(
   rootReducer,
-  {
-    tema: localStorage.getItem('tema')
-  },
   //para tirar o redux dev tools bota só compose abaixo
   composeEnhancers(
   	applyMiddleware(thunk),

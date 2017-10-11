@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
 import {routerReducer} from 'react-router-redux'
-import exemplo from './exemploReducer'
+import contador from './contadorReducer'
 
 const data = {
-  exemplo,
+  contador,
   routing:routerReducer
 }
 
