@@ -16,11 +16,11 @@ if ('serviceWorker' in navigator) {
 
 const compressor = createCompressor()
 
-let socket = io("http://localhost:3001")
+// let socket = io("http://localhost:3001")
 
-let socketIoMiddleware = createSocketIoMiddleware(socket, [ '/post/', '/get/','/delete/','/put/' ])
+// let socketIoMiddleware = createSocketIoMiddleware(socket, [ '/post/', '/get/','/delete/','/put/' ])
 
-socket.on('action', (d)=> console.log(d.type,d.data))
+// socket.on('action', (d)=> console.log(d.type,d.data))
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 let store = createStore(
@@ -28,7 +28,7 @@ let store = createStore(
   //para tirar o redux dev tools bota só compose abaixo
   composeEnhancers(
   	applyMiddleware(thunk),
-    applyMiddleware(socketIoMiddleware),
+    // applyMiddleware(socketIoMiddleware),
     autoRehydrate()
   )
 )
