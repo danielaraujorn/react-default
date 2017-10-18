@@ -1,6 +1,6 @@
 import {compose, createStore, applyMiddleware} from 'redux'
-import createSocketIoMiddleware from 'redux-socket.io'
-import io from 'socket.io-client'
+// import createSocketIoMiddleware from 'redux-socket.io'
+// import io from 'socket.io-client'
 import {syncHistoryWithStore} from 'react-router-redux'
 import {hashHistory} from 'react-router'
 import {persistStore, autoRehydrate} from 'redux-persist'
