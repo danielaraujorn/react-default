@@ -8,21 +8,14 @@ import {Provider} from 'react-redux'
 import store from './store'
 import Inicio from './components/inicio'
 
-// var ReactGA = require('react-ga');
-// ReactGA.initialize('UA-102773432-1');
+var ReactGA = require('react-ga');
 
-// ReactGA.initialize('UA-000000-01', {
-//   debug: true,
-//   titleCase: false,
-//   gaOptions: {
-//     userId: 123
-//   }
-// });
+ReactGA.initialize('UA-102773432-2');
 
-// function logPageView() {
-//   ReactGA.set({ page: window.location.pathname + window.location.search });
-//   ReactGA.pageview(window.location.pathname + window.location.search);
-// }
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname + window.location.search });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 export default class App extends Component {
   render() {
